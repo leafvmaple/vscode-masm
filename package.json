@@ -1,0 +1,42 @@
+{
+    "name": "masm",
+    "displayName": "MASM Language",
+    "description": "Microsoft Macro Assembler Language Support for Visual Studio Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "masm",
+            "aliases": ["MASM", "asm"],
+            "extensions": [".masm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "masm",
+            "scopeName": "source.inc, source.asm, source.s",
+            "path": "./syntaxes/Masm.tmLanguage.json"
+        }],
+        "snippets": [
+			{
+				"language": "masm",
+				"scopeName": "source.inc, source.asm, source.s",
+				"path": "./snippets/flow.json"
+			},
+			{
+				"language": "masm",
+				"scopeName": "source.inc, source.asm, source.s",
+				"path": "./snippets/macro.json"
+			},
+			{
+				"language": "masm",
+				"scopeName": "source.inc, source.asm, source.s",
+				"path": "./snippets/segment.json"
+			}
+		]
+    }
+}
